@@ -1,0 +1,23 @@
+{
+  "name": "forkify",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "keywords": [],
+  "author": "Patrycja Zawadzka",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "core-js": "^3.32.1",
+    "fractional": "^1.0.0",
+    "regenerator-runtime": "^0.14.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.9.3",
+    "parcel": "^2.9.3",
+    "sass": "^1.66.1"
+  }
+}
