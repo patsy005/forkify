@@ -746,9 +746,34 @@ body {
 }
 
 .upload {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr, 2fr, 1fr;
   gap: 4rem 6rem;
   display: grid;
+  overflow-y: scroll;
+}
+
+.upload__btn {
+  cursor: pointer;
+  align-items: center;
+  gap: 1em;
+  margin-top: 2em;
+  transition: transform .2s;
+  display: flex;
+}
+
+.upload__btn:hover {
+  transform: scale(1.05);
+}
+
+.upload__btn p {
+  font-size: 2rem;
+}
+
+.upload__btn img {
+  border: 1px solid #f38e82;
+  border-radius: 50%;
+  padding: .5rem;
 }
 
 .upload__column {
@@ -758,13 +783,21 @@ body {
   display: grid;
 }
 
+.upload__column--data {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.upload__column--ing {
+  grid-area: 1 / 2 / 5 / 4;
+}
+
 .upload__column label {
   color: inherit;
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-.upload__column input {
+.upload__column input, .upload__column select {
   border: 1px solid #ddd;
   border-radius: .5rem;
   padding: .8rem 1rem;
@@ -772,14 +805,18 @@ body {
   transition: all .2s;
 }
 
-.upload__column input::placeholder {
+.upload__column input::placeholder, .upload__column select::placeholder {
   color: #d3c7c3;
 }
 
-.upload__column input:focus {
+.upload__column input:focus, .upload__column select:focus {
   background-color: #f9f5f3;
   border: 1px solid #f38e82;
   outline: none;
+}
+
+.upload__column select {
+  color: #615551;
 }
 
 .upload__column button {

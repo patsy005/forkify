@@ -256,85 +256,13 @@
       </div>
     </div>
 
-    <!-- <div class="overlay hidden"></div>
-    <div class="add-recipe-window hidden">
-      <button class="btn--close-modal">&times;</button>
-      <form class="upload">
-        <div class="upload__column">
-          <h3 class="upload__heading">Recipe data</h3>
-          <label>Title</label>
-          <input value="TEST23" required name="title" type="text" />
-          <label>URL</label>
-          <input value="TEST23" required name="sourceUrl" type="text" />
-          <label>Image URL</label>
-          <input value="TEST23" required name="image" type="text" />
-          <label>Publisher</label>
-          <input value="TEST23" required name="publisher" type="text" />
-          <label>Prep time</label>
-          <input value="23" required name="cookingTime" type="number" />
-          <label>Servings</label>
-          <input value="23" required name="servings" type="number" />
-        </div>
-
-        <div class="upload__column">
-          <h3 class="upload__heading">Ingredients</h3>
-          <label>Ingredient 1</label>
-          <input
-            value="0.5,kg,Rice"
-            type="text"
-            required
-            name="ingredient-1"
-            placeholder="Format: 'Quantity,Unit,Description'"
-          />
-          <label>Ingredient 2</label>
-          <input
-            value="1,,Avocado"
-            type="text"
-            name="ingredient-2"
-            placeholder="Format: 'Quantity,Unit,Description'"
-          />
-          <label>Ingredient 3</label>
-          <input
-            value=",,salt"
-            type="text"
-            name="ingredient-3"
-            placeholder="Format: 'Quantity,Unit,Description'"
-          />
-          <label>Ingredient 4</label>
-          <input
-            type="text"
-            name="ingredient-4"
-            placeholder="Format: 'Quantity,Unit,Description'"
-          />
-          <label>Ingredient 5</label>
-          <input
-            type="text"
-            name="ingredient-5"
-            placeholder="Format: 'Quantity,Unit,Description'"
-          />
-          <label>Ingredient 6</label>
-          <input
-            type="text"
-            name="ingredient-6"
-            placeholder="Format: 'Quantity,Unit,Description'"
-          />
-        </div>
-
-        <button class="btn upload__btn">
-          <svg>
-            <use href="src/img/icons.svg#icon-upload-cloud"></use>
-          </svg>
-          <span>Upload</span>
-        </button>
-      </form>
-    </div> -->
 
     
     <div class="overlay hidden"></div>
     <div class="add-recipe-window hidden">
       <button class="btn--close-modal">&times;</button>
       <form class="upload">
-        <div class="upload__column">
+        <div class="upload__column upload__column--data">
           <h3 class="upload__heading">Recipe data</h3>
           <label>Title</label>
           <input value="TEST23" required name="title" type="text" />
@@ -350,120 +278,56 @@
           <input value="23" required name="servings" type="number" />
         </div>
 
-        <div class="upload__column">
+        <div class="upload__column upload__column--ing">
           <h3 class="upload__heading">Ingredients</h3>
-          <label for="ingredient-1">Ingredient 1</label>
-          <input
-            value="Onion"
-            type="text"
-            required
-            name="ingredient-1"
-            placeholder="description"
-            id="ingredient-1"
-          />
-          <input type="text" required name="ingredient-1" id="ingredient-1" placeholder="quantity" value="1">
-          <select name="ingredient-1" id="ingredient-1">
+          
+          <label for="ingredient-1-quantity">Ingredient 1</label>
+          <input type="text" required name="ingredient-1-quantity" id="ingredient-1-quantity" placeholder="quantity">
+
+          <label for="ingredient-1-unit"></label>
+          <select name="ingredient-1-unit" id="ingredient-1-unit">
             <option value="" id="unit">-- choose unit --</option>
-            <option value="cup" id="unit">cup</option>
+            <option value="cup" id="unit">piece</option>
             <option value="cups" id="unit">cups</option>
             <option value="spoon" id="unit">spoon</option>
             <option value="spoons" id="unit">spoons</option>
             <option value="grams" id="unit">grams</option>
           </select>
-
-          <label for="ingredient-2">Ingredient 2</label>
+          <label for="ingredient-1-description"></label>
           <input
-            value="tomato"
             type="text"
             required
-            name="ingredient-2"
-            placeholder="description"
-            id="ingredient-1"
+            name="ingredient-1-description"
+            placeholder="ingredient"
+            id="ingredient-1-description"
           />
-          <input type="text" required name="ingredient-2" id="ingredient-2" placeholder="quantity" value="2">
-          <select name="ingredient-2" id="ingredient-2">
+
+          
+
+          <label for="ingredient-2-quantity">Ingredient 2</label>
+          <input type="text" required name="ingredient-2-quantity" id="ingredient-2-quantity" placeholder="quantity">
+          <label for="ingredient-2-unit"></label>
+          <select name="ingredient-2-unit" id="ingredient-2-unit">
             <option value="" id="unit">-- choose unit --</option>
-            <option value="cup" id="unit">cup</option>
+            <option value="cup" id="unit">pieces</option>
             <option value="cups" id="unit">cups</option>
             <option value="spoon" id="unit">spoon</option>
             <option value="spoons" id="unit">spoons</option>
             <option value="grams" id="unit">grams</option>
           </select>
+          <label for="ingredient-2-description"></label>
+          <input
+            type="text"
+            required
+            name="ingredient-2-description"
+            placeholder="ingredient"
+            id="ingredient-2-description"
+          />
 
-
-    <!-- <div class="overlay hidden"></div>
-    <div class="add-recipe-window hidden">
-      <button class="btn--close-modal">&times;</button>
-      <form class="upload">
-        <div class="upload__column">
-          <h3 class="upload__heading">Recipe data</h3>
-          <label>Title</label>
-          <input value="TEST23" required name="title" type="text" />
-          <label>URL</label>
-          <input value="TEST23" required name="sourceUrl" type="text" />
-          <label>Image URL</label>
-          <input value="TEST23" required name="image" type="text" />
-          <label>Publisher</label>
-          <input value="TEST23" required name="publisher" type="text" />
-          <label>Prep time</label>
-          <input value="23" required name="cookingTime" type="number" />
-          <label>Servings</label>
-          <input value="23" required name="servings" type="number" />
         </div>
-
-        <div class="upload__column">
-          <h3 class="upload__heading">Ingredients</h3>
-          <label for="ingredient-1">Ingredient 1</label>
-          <input
-            value="description"
-            type="text"
-            required
-            name="ingredient-1"
-            placeholder="description"
-            id="ingredient-1"
-          />
-          <input type="text" required name="ingredient-1" id="ingredient-1" placeholder="quantity">
-          <select name="ingredient-1" id="ingredient-1">
-            <option value="" id="unit">-- choose unit --</option>
-            <option value="cup" id="unit">cup</option>
-            <option value="cups" id="unit">cups</option>
-            <option value="spoon" id="unit">spoon</option>
-            <option value="spoons" id="unit">spoons</option>
-            <option value="grams" id="unit">grams</option>
-          </select> -->
-
-          <!-- <label>Ingredient 2</label>
-          <input
-            value="1,,Avocado"
-            type="text"
-            name="ingredient-2"
-            placeholder="Format: 'Quantity,Unit,Description'"
-          />
-          <label>Ingredient 3</label>
-          <input
-            value=",,salt"
-            type="text"
-            name="ingredient-3"
-            placeholder="Format: 'Quantity,Unit,Description'"
-          />
-          <label>Ingredient 4</label>
-          <input
-            type="text"
-            name="ingredient-4"
-            placeholder="Format: 'Quantity,Unit,Description'"
-          />
-          <label>Ingredient 5</label>
-          <input
-            type="text"
-            name="ingredient-5"
-            placeholder="Format: 'Quantity,Unit,Description'"
-          />
-          <label>Ingredient 6</label>
-          <input
-            type="text"
-            name="ingredient-6"
-            placeholder="Format: 'Quantity,Unit,Description'"
-          /> -->
+        <div class="upload__btn">
+          <img src="src/img/ph_plus.svg" alt="" />
+          <p>Add ingredient</p>
         </div>
 
         <button class="btn upload__btn">

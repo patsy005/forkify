@@ -137,19 +137,20 @@ const clearBookmarks = function () {
 }
 
 
+
 export const uploadRecipe = async function (newRecipe) {
     try {
         console.log(newRecipe);
         const ingredients = Object.entries(newRecipe)
-        
+      .filter(entry => entry[0].startsWith('ingredient') && entry[1] !== '')
+      .map(ing => {
+        const ingArr = ing[1].split(',').map(el => el.trim());
+        // const ingArr = ing[1].replaceAll(' ', '').split(',');
 
-        // const {product:description, quantity, unit} = newRecipe;
+        const [quantity, unit, description] = ingArr;
 
-        // const ingredients = {
-        //     quantity,
-        //     unit,
-        //     description
-        // }
+        return { quantity: quantity ? +quantity : null, unit, description };
+      });
         const recipe = {
             title: newRecipe.title,
             source_url: newRecipe.sourceUrl,
@@ -160,6 +161,7 @@ export const uploadRecipe = async function (newRecipe) {
             ingredients,
         };
         console.log(recipe);
+        console.log(ingredients);
 
      const data = await sendJSON(`${API_URL}?key=${API_KEY}`, recipe);
      state.recipe = createRecipeObject(data);
